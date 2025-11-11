@@ -1,0 +1,108 @@
+:root{
+  --bg: #080808;
+  --surface: #0f0f11;
+  --panel: #0b0b0b;
+  --brand: #f7b500;   /* yellow highlight matching your theme */
+  --accent: #7A6EE7;  /* optional purple accent */
+  --muted: #9a9a9a;
+  --card-border: rgba(255,255,255,0.04);
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 8px;
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.6);
+
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg, var(--bg) 0%, #050505 100%);
+  color: #f3f3f3;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* Container */
+.container{max-width:1100px;margin:0 auto;padding:28px}
+
+/* Header */
+header{
+  position:sticky; top:0; z-index:50;
+  background:linear-gradient(180deg, rgba(0,0,0,0.8), rgba(0,0,0,0.85));
+  border-bottom:1px solid rgba(255,255,255,0.02);
+  backdrop-filter: blur(6px);
+}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.logo{display:flex;gap:12px;align-items:center}
+.logo img{height:34px;width:34px;object-fit:cover;border-radius:6px}
+.site-title{font-weight:700;color:var(--brand)}
+.header-sub{color:var(--muted);font-size:0.9rem}
+
+/* Nav */
+.nav-list{display:flex;gap:22px;align-items:center}
+.nav-list a{color:#eaeaea;text-decoration:none;padding:8px 12px;border-radius:10px}
+.nav-list a:hover{background:rgba(255,255,255,0.03)}
+.nav-list a.active{background:#111;padding:8px 14px;color:var(--brand)}
+
+/* Hero */
+.hero{padding:48px 0;text-align:center}
+.hero h1{color:var(--brand);font-size:2.2rem;margin:0 0 12px}
+.lead{color:var(--muted);max-width:760px;margin:0 auto;font-size:1rem}
+.cta-row{margin-top:18px}
+
+/* Buttons */
+.btn{
+  background:#fff;color:#000;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+.btn:hover{ transform: translateY(-2px) }
+
+/* Sections and cards */
+.section{margin:28px 0;padding:20px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid var(--card-border)}
+.events-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:700px){ .events-grid{ grid-template-columns:repeat(3,1fr); } }
+
+.card{
+  padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid var(--card-border);
+  transition: transform .18s cubic-bezier(.2,.9,.2,1), box-shadow .18s;
+}
+.card:hover{ transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.6); }
+
+.event-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.event-title{font-weight:700;color:var(--brand);margin:0 0 6px;font-size:1.02rem}
+.event-when{color:var(--muted);font-size:0.95rem;margin:0}
+.event-desc{color:var(--muted);margin:10px 0 0}
+
+/* Badge */
+.badge{background:var(--brand);color:#000;padding:6px 10px;border-radius:999px;font-weight:700;font-size:0.85rem}
+
+/* Controls */
+.controls-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px}
+.controls-left{display:flex;gap:8px;align-items:center}
+.events-input{padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.events-select{padding:8px;border-radius:8px;background:transparent;color:inherit;border:1px solid rgba(255,255,255,0.04)}
+
+/* Pagination small */
+.pager .btn{padding:8px 10px;border-radius:8px}
+
+/* Footer */
+footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+
+/* Event detail page */
+.event-hero{padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:12px;margin-bottom:18px}
+.event-hero h1{margin:0;color:var(--brand)}
+.event-detail{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:900px){ .event-detail{grid-template-columns:1fr 360px} }
+
+.avatar{width:100%;height:200px;object-fit:cover;border-radius:12px;border:1px solid var(--card-border)}
+
+/* small utilities */
+.muted{color:var(--muted)}
+.small{font-size:0.9rem}
+.center{text-align:center}

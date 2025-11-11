@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sundarbans — Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-row">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Sundarbans logo">
+        <div><div class="site-title">Sundarbans</div><div class="header-sub">House, IIT Madras</div></div>
+      </div>
+      <nav>
+        <div class="nav-list">
+          <a href="index.html">Home</a>
+          <a href="events.html" class="active">Events</a>
+          <a href="clubs.html">Clubs</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="council.html">Council</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" tabindex="-1">
+    <section class="section" aria-labelledby="events-heading">
+      <div class="controls-row">
+        <div class="controls-left">
+          <label for="search" class="small muted">Search</label>
+          <input id="search" class="events-input" type="search" placeholder="Search events..." />
+          <select class="events-select">
+            <option>All</option>
+            <option>Upcoming</option>
+            <option>Past</option>
+          </select>
+          <select class="events-select">
+            <option>Latest</option>
+            <option>Soonest</option>
+          </select>
+        </div>
+        <div class="controls-right small muted">Showing 3 events</div>
+      </div>
+
+      <h2 id="events-heading">Upcoming events</h2>
+
+      <div class="events-grid">
+        <!-- Card 1 -->
+        <article class="card" role="article">
+          <div class="event-meta">
+            <div>
+              <h3 class="event-title">Intro to Coastal Robotics</h3>
+              <div class="event-when muted">Nov 9, 2025 • 4:00 PM • New Computer Lab</div>
+            </div>
+            <div class="badge">Nov 9</div>
+          </div>
+          <p class="event-desc muted">Hands-on session building small surface drones for river mapping. Learn from seniors and build a prototype in teams.</p>
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" href="event-e1.html">Details</a>
+            <a class="btn" href="#" style="background:var(--brand);color:#000">Register</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" role="article">
+          <div class="event-meta">
+            <div>
+              <h3 class="event-title">Mangrove Conservation Talk</h3>
+              <div class="event-when muted">Nov 10, 2025 • 2:00 PM • Auditorium</div>
+            </div>
+            <div class="badge">Nov 10</div>
+          </div>
+          <p class="event-desc muted">Panel discussion with researchers and local activists on conserving mangrove ecosystems and community initiatives.</p>
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" href="event-e2.html">Details</a>
+            <a class="btn" href="#" style="background:var(--brand);color:#000">Register</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" role="article">
+          <div class="event-meta">
+            <div>
+              <h3 class="event-title">Design Sprint: Regional Branding</h3>
+              <div class="event-when muted">Nov 11, 2025 • 11:00 AM • Design Lab</div>
+            </div>
+            <div class="badge">Nov 11</div>
+          </div>
+          <p class="event-desc muted">Quick sprint to create posters and social posts for the house — open to designers and beginners.</p>
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" href="event-e3.html">Details</a>
+            <a class="btn" href="#" style="background:var(--brand);color:#000">Register</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="footer-row">
+      <div><strong>Sundarbans House</strong><div class="muted small">IIT Madras</div></div>
+      <div class="links"><a href="#">Resources</a> <span class="muted">•</span> <a href="#">Repo</a></div>
+    </div>
+  </footer>
+</body>
+</html>
